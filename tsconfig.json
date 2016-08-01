@@ -9,5 +9,9 @@
     "removeComments": false,
     "noImplicitAny": false,
     "outDir": "public/js"
-  }
+  },
+  "exclude": [
+    "public",
+    "node_modules"
+  ]
 }
