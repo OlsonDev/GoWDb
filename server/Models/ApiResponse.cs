@@ -1,0 +1,39 @@
+﻿using System;
+
+namespace Gems.Models {
+	public class ApiResponse {
+		public bool Valid { get; protected set; }
+		public string Message { get; protected set; } = string.Empty;
+		public object Result { get; protected set; } = new object();
+	}
+
+	public class InvalidApiResponse : ApiResponse {
+		public InvalidApiResponse() {
+		}
+
+		public InvalidApiResponse(Exception exception) {
+			Message = exception.Message;
+			Result = exception; // TODO: Only do this on for local/debug requests
+		}
+
+		public InvalidApiResponse(object result) {
+			Result = result;
+		}
+
+		public InvalidApiResponse(string message) {
+			Message = message;
+		}
+
+		public InvalidApiResponse(object result, string message) {
+			Result = result;
+			Message = message;
+		}
+	}
+
+	public class ValidApiResponse : ApiResponse {
+		public ValidApiResponse(object result) {
+			Valid = true;
+			Result = result;
+		}
+	}
+}

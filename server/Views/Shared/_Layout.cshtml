@@ -1,0 +1,49 @@
+@{
+	var controller = ((string)ViewContext.RouteData.Values["controller"]).ToLower();
+	var action = ((string)ViewContext.RouteData.Values["action"]).ToLower();
+	var ca = $"{controller}.{action}";
+	var title = ViewData["Title"] as string;
+	title = string.IsNullOrWhiteSpace(title) ? "Gems of War Database" : $"{title} | Gems of War Database";
+}
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		@RenderSection("Meta", required: false)
+		<title>@title</title>
+		<link type="text/css" rel="stylesheet" href="/css/site.css"/>
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+		@RenderSection("Styles", required: false)
+	</head>
+	<body>
+		<div class="content">
+			<header>
+				<nav>
+					<a href="/kingdoms">Kingdoms</a>
+					<a href="/troops">Troops</a>
+					<a href="/weapons">Weapons</a>
+					<a href="/classes">Classes</a>
+					<a href="/quests">Quests</a>
+					<a href="/admin">Admin</a>
+				</nav>
+			</header>
+			<main>@RenderBody()</main>
+			<footer>Website by Josh Olson. All content &copy; Infinity Plus Two.</footer>
+		</div>
+
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="/nm/core-js/client/shim.min.js"></script>
+    <script src="/nm/zone.js/dist/zone.js"></script>
+    <script src="/nm/reflect-metadata/Reflect.js"></script>
+    <script src="/nm/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="/js/systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+		@RenderSection("Scripts", required: false)
+	</body>
+</html>
