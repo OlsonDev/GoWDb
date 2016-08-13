@@ -1,6 +1,13 @@
+import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Component } from '@angular/core';
+
 @Component({
-  selector: 'gems-app',
-  template: '<h1>Games of War Database App</h1>'
+  moduleId: module.id
+  , selector: 'gems-app'
+	, templateUrl: '/views/app.html'
+	, styleUrls: [ '../css/app.component.css' ]
+  , directives: [ ROUTER_DIRECTIVES ]
 })
-export class AppComponent { }
+export class AppComponent {
+
+}
