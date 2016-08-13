@@ -42,7 +42,7 @@ namespace Gems {
 			});
 
 			services.AddMvc(options => {
-				options.Conventions.Add(new HyphenatedRoutingConvention());
+				// options.Conventions.Add(new HyphenatedRoutingConvention());
 			});
 
 			services.AddSingleton<IConfiguration>(sp => Configuration);
@@ -80,6 +80,16 @@ namespace Gems {
 			app.UseStaticFiles();
 			app.UseSession();
 			app.UseMvc(routes => {
+				routes.MapRoute(
+					name: "masters",
+					template: "{path:regex(kingdoms|troops|weapons|classes|quests|admin)}",
+					defaults: new { controller = "Home", action = "Index" }
+				);
+				routes.MapRoute(
+					name: "details",
+					template: "{path:regex(kingdom|troop|weapon|class|quest)}/{id}",
+					defaults: new { controller = "Home", action = "Index" }
+				);
 				routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
 			});
 		}

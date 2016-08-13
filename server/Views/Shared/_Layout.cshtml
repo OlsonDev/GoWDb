@@ -8,6 +8,7 @@
 <!doctype html>
 <html>
 	<head>
+		<base href="/"/>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		@RenderSection("Meta", required: false)
@@ -17,20 +18,10 @@
 		@RenderSection("Styles", required: false)
 	</head>
 	<body>
-		<div class="content">
-			<header>
-				<nav>
-					<a href="/kingdoms">Kingdoms</a>
-					<a href="/troops">Troops</a>
-					<a href="/weapons">Weapons</a>
-					<a href="/classes">Classes</a>
-					<a href="/quests">Quests</a>
-					<a href="/admin">Admin</a>
-				</nav>
-			</header>
-			<main>@RenderBody()</main>
-			<footer>Website by Josh Olson. All content &copy; Infinity Plus Two.</footer>
-		</div>
+		<gems-app>
+			<div>Loading&hellip;</div>
+			<div>@RenderBody()</div>
+		</gems-app>
 
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
