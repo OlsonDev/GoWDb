@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:cd19f93628132528b6a815f9dc28d3e0:d46ddc8838f699eec32a1d24e1b90131:de9159d8c3acf85f0bbe257d65fbd9b6$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Flags.png" width="314" height="1694">
+    <sprite n="Options.de_DE" x="0" y="0" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.en_US" x="0" y="212" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.es_ES" x="0" y="424" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.fr_FR" x="0" y="636" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.it_IT" x="0" y="848" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.jp_JP" x="0" y="1060" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.kr_KR" x="0" y="1272" w="314" h="210" pX="0.5" pY="0.5"/>
+    <sprite n="Options.zh_CH" x="0" y="1484" w="314" h="210" pX="0.5" pY="0.5"/>
+</TextureAtlas>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:cb95cb8380475ba57d4a10e4d872610a:29e648f774b24a6c78f8a86a1cd6ca95:1f843246b5740bc0215e7abd04ab85ec$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Classes.png" width="901" height="895">
+    <sprite n="Classes.archer" x="302" y="0" w="299" h="266" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.assassin" x="599" y="273" w="300" h="290" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.knight" x="0" y="549" w="246" h="300" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.mechanist" x="0" y="0" w="300" h="264" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.necromancer" x="540" y="565" w="358" h="330" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.priest" x="603" y="0" w="298" h="271" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.sorcerer" x="297" y="268" w="300" h="284" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.warden" x="248" y="554" w="290" h="300" pX="0.5" pY="0.5"/>
+    <sprite n="Classes.warrior" x="0" y="266" w="295" h="281" pX="0.5" pY="0.5"/>
+</TextureAtlas>

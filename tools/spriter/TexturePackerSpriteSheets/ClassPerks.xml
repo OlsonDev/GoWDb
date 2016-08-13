@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:36daa6345b4c071c22a8d9e294face39:bcfd2625d01667562c36ea8850248691:31be91989c8afcafc2129f94785b1fc2$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="ClassPerks.png" width="1008" height="1008">
+    <sprite n="ClassMenu2.aug_armor" x="0" y="0" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_attack" x="0" y="202" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_beast" x="0" y="404" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_construct" x="0" y="606" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_daemon" x="0" y="808" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_divine" x="202" y="0" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_dragon" x="404" y="0" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_dwarf" x="606" y="0" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_elemental" x="808" y="0" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_elf" x="202" y="202" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_fey" x="202" y="404" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_giant" x="202" y="606" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_human" x="202" y="808" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_knight" x="404" y="202" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_life" x="606" y="202" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_mana" x="808" y="202" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_marauder" x="404" y="404" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_mech" x="404" y="606" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_monster" x="404" y="808" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_raksha" x="606" y="404" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_undead" x="808" y="404" w="200" h="200" pX="0.5" pY="0.5"/>
+    <sprite n="ClassMenu2.aug_wildfolk" x="606" y="606" w="200" h="200" pX="0.5" pY="0.5"/>
+</TextureAtlas>

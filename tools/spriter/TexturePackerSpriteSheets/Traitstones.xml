@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:260439e350b6acdf0bc65a9fbe14f995:6ad39f1d39e374b86c50d25280f37bed:f187b9bcfba0c7ad57c8fa95c3287085$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Traitstones.png" width="1846" height="1629">
+    <sprite n="LargeRunes.Rune00" x="756" y="1435" w="200" h="193" pX="0.5" pY="0.5" oX="0" oY="1" oW="200" oH="194"/>
+    <sprite n="LargeRunes.Rune01" x="246" y="1436" w="200" h="193" pX="0.5" pY="0.5" oX="0" oY="1" oW="200" oH="194"/>
+    <sprite n="LargeRunes.Rune02" x="448" y="1436" w="200" h="193" pX="0.5" pY="0.5" oX="0" oY="1" oW="200" oH="194"/>
+    <sprite n="LargeRunes.Rune03" x="958" y="1435" w="200" h="193" pX="0.5" pY="0.5" oX="0" oY="1" oW="200" oH="194"/>
+    <sprite n="LargeRunes.Rune04" x="1494" y="1158" w="200" h="194" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune05" x="1494" y="1354" w="200" h="194" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune06" x="264" y="1158" w="244" h="276" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune07" x="756" y="1158" w="244" h="275" pX="0.5" pY="0.5" oX="0" oY="1" oW="244" oH="276"/>
+    <sprite n="LargeRunes.Rune08" x="1002" y="1158" w="244" h="275" pX="0.5" pY="0.5" oX="0" oY="1" oW="244" oH="276"/>
+    <sprite n="LargeRunes.Rune09" x="1248" y="1158" w="244" h="275" pX="0.5" pY="0.5" oX="0" oY="1" oW="244" oH="276"/>
+    <sprite n="LargeRunes.Rune10" x="0" y="1160" w="244" h="276" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune11" x="510" y="1158" w="244" h="276" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune12" x="264" y="870" w="262" h="286" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune13" x="528" y="870" w="262" h="286" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune14" x="792" y="870" w="262" h="286" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune15" x="1056" y="870" w="262" h="286" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune16" x="1320" y="870" w="262" h="286" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune17" x="1584" y="870" w="262" h="286" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune18" x="0" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune19" x="264" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune20" x="528" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune21" x="792" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune22" x="1056" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune23" x="1320" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune24" x="1584" y="0" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune25" x="0" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune26" x="264" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune27" x="528" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune28" x="792" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune29" x="1056" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune30" x="1320" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune31" x="1584" y="290" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune32" x="0" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune33" x="264" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune34" x="528" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune35" x="792" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune36" x="1056" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune37" x="1320" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune38" x="1584" y="580" w="262" h="288" pX="0.5" pY="0.5"/>
+    <sprite n="LargeRunes.Rune39" x="0" y="870" w="262" h="288" pX="0.5" pY="0.5"/>
+</TextureAtlas>
