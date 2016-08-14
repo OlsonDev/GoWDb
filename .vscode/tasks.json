@@ -1,15 +1,19 @@
 {
-	"options": {
-		"cwd": "${workspaceRoot}/server"
-	},
 	"version": "0.1.0",
-	"command": "dotnet",
+	"command": "cmd",
 	"isShellCommand": true,
-	"args": [],
+	"args": [ "/C" ],
 	"tasks": [
 		{
-			"taskName": "build",
-			"args": [],
+			"taskName": "build-server",
+			"suppressTaskName": true,
+			"args": [ "dotnet build server" ],
+			"isBuildCommand": true,
+			"problemMatcher": "$msCompile"
+		}, {
+			"taskName": "build-spriter",
+			"suppressTaskName": true,
+			"args": [ "dotnet build tools/spriter" ],
 			"isBuildCommand": true,
 			"problemMatcher": "$msCompile"
 		}

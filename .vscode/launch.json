@@ -2,10 +2,10 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": ".NET Core Launch (console)",
+			"name": "server console",
 			"type": "coreclr",
 			"request": "launch",
-			"preLaunchTask": "build",
+			"preLaunchTask": "build-server",
 			"program": "${workspaceRoot}/server/bin/Debug/netcoreapp1.0/server.dll",
 			"args": [],
 			"cwd": "${workspaceRoot}/server",
@@ -14,6 +14,17 @@
 			"env": {
 				"ASPNETCORE_ENVIRONMENT": "development"
 			}
+		},
+		{
+			"name": "spriter console",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "build-spriter",
+			"program": "${workspaceRoot}/tools/spriter/bin/Debug/netcoreapp1.0/spriter.dll",
+			"args": [],
+			"cwd": "${workspaceRoot}/tools/spriter",
+			"externalConsole": false,
+			"stopAtEntry": false
 		},
 		{
 			"name": ".NET Core Attach",
