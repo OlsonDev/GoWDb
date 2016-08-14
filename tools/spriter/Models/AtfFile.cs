@@ -70,7 +70,7 @@ namespace Spriter.Models {
 			builder.AppendLine($"=========================================");
 			foreach (var data in textureData.Cast<AtfRawCompressedAlpha>()) {
 				if (data.Dxt5ImageDataLength > 0) {
-					File.WriteAllBytes(@"C:\output.dxt5.hex", data.Dxt5ImageData);
+					File.WriteAllBytes(@".\output.dxt5.hex", data.Dxt5ImageData);
 					data.ProcessDxt5ImageData(Width, Height);
 				}
 				builder.AppendLine($"dxt5  data length : {data.Dxt5ImageDataLength}");
@@ -151,174 +151,85 @@ namespace Spriter.Models {
 		public uint Etc2RgbaImageDataLength { get; private set; }
 		public byte[] Etc2RgbaImageData { get; private set; }
 
-		// public void ProcessDxt5ImageData() {
-		// 	var w = 512;
-		// 	var h = 1024;
-		// 	var image = new Image(w, h);
-		// 	var pixels = image.Pixels;
-
-		// 	var reader = new BinaryReader(new MemoryStream(Dxt5ImageData));
-		// 	var x = 0;
-		// 	var y = 0;
-
-		// 	var numLogs = 0;
-
-		// 	for (var blockIndex = 0; blockIndex < Dxt5ImageDataLength; blockIndex += 16) {
-		// 		var alpha0 = reader.ReadByte();
-		// 		var alpha1 = reader.ReadByte();
-		// 		var alphaMod = reader.ReadBytes(6); // 48 bits; 4x4 3-bit values
-		// 		var color0raw = reader.ReadInt16();
-		// 		var color1raw = reader.ReadInt16();
-		// 		var colorMod = reader.ReadBytes(4); // 32 bits; 4x4 2-bit values
-
-		// 		var alphaLookup = BitsToInts(alphaMod, 3);
-		// 		var colorLookup = BitsToInts(colorMod, 2);
-		// 		var alphas = BuildAlphas(alpha0, alpha1);
-		// 		var colors = BuildColors(color0raw, color1raw);
-		// 		if (numLogs < 1) {
-		// 			Console.WriteLine("------------------------");
-		// 			Console.WriteLine($"a0: {alpha0}");
-		// 			Console.WriteLine($"a1: {alpha1}");
-		// 			Console.WriteLine(string.Join("\n", alphas.Select(a => a.ToString())));
-		// 			Console.WriteLine("------------------------");
-		// 			Console.WriteLine($"c0: {color0raw}");
-		// 			Console.WriteLine($"c1: {color1raw}");
-		// 			Console.WriteLine(string.Join("\n", colors.Select(c => $"<{c.R} {c.G} {c.B} {c.A}>")));
-		// 			Console.WriteLine("------------------------");
-
-		// 			var alphaLookupGroups = alphaLookup
-		// 				.Select((n, i) => new { s = n.ToString(), i })
-		// 				.GroupBy(g => g.i / 4, o => o.s)
-		// 			;
-		// 			foreach (var g in alphaLookupGroups) {
-		// 				Console.WriteLine(string.Join(" ", g));
-		// 			}
-		// 			Console.WriteLine("------------------------");
-		// 			var colorLookupGroups = colorLookup
-		// 				.Select((n, i) => new { s = n.ToString(), i })
-		// 				.GroupBy(g => g.i / 4, o => o.s)
-		// 			;
-		// 			foreach (var g in colorLookupGroups) {
-		// 				Console.WriteLine(string.Join(" ", g));
-		// 			}
-		// 			Console.WriteLine("------------------------");
-		// 			numLogs++;
-		// 		}
-		// 		for (var i = 0; i < 4; i++) {
-		// 			for (var j = 0; j < 4; j++) {
-		// 				var n = j * 4 + i;
-		// 				var a = alphas[alphaLookup[n]];
-		// 				var rgb = colors[colorLookup[n]];
-		// 				var c = new Color(rgb.R, rgb.G, rgb.B, a);
-		// 				var pi = ((y + j) * w) + x + i;
-		// 				pixels[pi] = c;
-		// 			}
-		// 		}
-
-		// 		if (x + 4 < w) {
-		// 			x += 4;
-		// 		} else {
-		// 			y += 4;
-		// 			x = 0;
-		// 		}
-		// 	}
-
-		// 	image.Save(File.OpenWrite(@"C:\output.png"));
-		// }
-
 		public void ProcessDxt5ImageData(int width, int height) {
 			var image = new Image(width, height);
 			var pixels = image.Pixels;
 			var reader = new BinaryReader(new MemoryStream(Dxt5ImageData));
+			var numBlocksHigh = height / 4;
+			var numBlocksWide = width / 4;
 
-			var height_4 = height / 4;
-			var width_4 = width / 4;
-
-			for (var by = 0; by < height_4; by++) {
-				for (var bx = 0; bx < width_4; bx++) {
+			for (var by = 0; by < numBlocksHigh; by++) {
+				for (var bx = 0; bx < numBlocksWide; bx++) {
 					var alphas = BuildAlphas(reader.ReadByte(), reader.ReadByte());
-					var alphaIndices = reader.ReadBytes(6); // 48 bits; 4x4 3-bit values
-					var colors = BuildColors(reader.ReadInt16(), reader.ReadInt16());
-					var colorIndices = reader.ReadBytes(4); // 32 bits; 4x4 2-bit values
-					var alphaLookup = BitsToInts(alphaIndices, 3);
-					var colorLookup = BitsToInts(colorIndices, 2);
-
+					var a0 = reader.ReadUInt16();
+					var a1 = reader.ReadUInt16();
+					var a2 = reader.ReadUInt16();
+					var alphaIndices = new [] { a2, a1, a0 };
+					var colors = BuildColors(reader.ReadUInt16(), reader.ReadUInt16());
+					var colorIndices = reader.ReadUInt32BE();
 					for (var y = 0; y < 4; y++) {
 						for (var x = 0; x < 4; x++) {
-							var blockIndex = y * 4 + x;
-							var alpha = alphas[alphaLookup[blockIndex]];
-							var color = colors[colorLookup[blockIndex]];
+							var blockIndex = y * 4 + 3 - x;
+							var alphaIndex = GetAlphaIndex(alphaIndices, blockIndex);
+							var alpha1 = alphas[alphaIndex];
+							var color = colors[(colorIndices >> (2 * (15 - blockIndex))) & 0x03];
 							var pixelIndex = (by * 4 + y) * width + bx * 4 + x;
-							Debug.Assert(pixelIndex < 512 * 1024, $"Not less than {512 * 1024}, instead is {pixelIndex} x{x} y{y} bx{bx} by{by} w_4{width_4} h_4{height_4}");
-							pixels[pixelIndex] = new Color(color.R, color.G, color.B, alpha);
+							pixels[pixelIndex] = new Color(color.R, color.G, color.B, alpha1);
 						}
+					}
+
+					if (by == 37 && bx == 3) {
+						var derp = 0;
 					}
 				}
 			}
 
-			image.Save(File.OpenWrite(@"C:\output.png"));
+			image.Save(File.OpenWrite(@".\output.png"));
 		}
 
-		public int[] BitsToInts(byte[] bytes, int bitsPerInt) {
-			var bits = new BitArray(bytes);
-			var numInts = bytes.Length * 8 / bitsPerInt;
-			var ints = new int[numInts];
-			var bitsIndex = 0;
-			for (var i = 0; i < numInts; i++) {
-				var n = 0;
-				for (var b = 0; b < bitsPerInt; b++) {
-					n <<= 1;
-					n |= Convert.ToInt32(bits[bitsIndex]);
-					bitsIndex++;
-				}
-				ints[i] = n;
-			}
-			return ints;
+		public int GetAlphaIndex(UInt16[] alphaIndices, int blockIndex) {
+			return ExtractBitsFromUInt16Array(alphaIndices, 3 * (15 - blockIndex), 3);
 		}
 
-		public double Lerp(double from, double to, double amount) {
-			return from + (to - from) * amount;
+		public int ExtractBitsFromUInt16Array(UInt16[] array, int shift, int length) {
+			var lastIndex = array.Length - 1;
+			var width = 16;
+			var rowS = shift / width;
+			var rowE = (shift + length - 1) / width;
+			var mask = (UInt16)(Math.Pow(2, length) - 1);
+			var shiftS = shift % width;
+			var bits = (array[lastIndex - rowS] >> shiftS) & mask;
+			if (rowS == rowE) return bits; // Single UInt16
+			// Two contiguous UInt16s
+			var shiftE = width - shiftS;
+			var mask2 = (int)Math.Pow(2, length - shiftE) - 1;
+			return bits + ((array[lastIndex - rowE] & mask2) << shiftE);
 		}
+
 		public byte[] BuildAlphas(byte a0, byte a1) {
 			var alphas = new byte[8];
 			alphas[0] = a0;
 			alphas[1] = a1;
 
-			if (a0 > a1) {
-				alphas[2] = (byte)Math.Floor(Lerp(a0, a1, 1.0 / 7.0));
-				alphas[3] = (byte)Math.Floor(Lerp(a0, a1, 2.0 / 7.0));
-				alphas[4] = (byte)Math.Floor(Lerp(a0, a1, 3.0 / 7.0));
-				alphas[5] = (byte)Math.Floor(Lerp(a0, a1, 4.0 / 7.0));
-				alphas[6] = (byte)Math.Floor(Lerp(a0, a1, 5.0 / 7.0));
-				alphas[7] = (byte)Math.Floor(Lerp(a0, a1, 6.0 / 7.0));
-			} else {
-				alphas[2] = (byte)Math.Floor(Lerp(a0, a1, 1.0 / 5.0));
-				alphas[3] = (byte)Math.Floor(Lerp(a0, a1, 2.0 / 5.0));
-				alphas[4] = (byte)Math.Floor(Lerp(a0, a1, 3.0 / 5.0));
-				alphas[5] = (byte)Math.Floor(Lerp(a0, a1, 4.0 / 5.0));
+			var numAlphasToCompute = 6;
+			if (a0 <= a1) {
+				numAlphasToCompute = 4;
 				alphas[6] = 0;
 				alphas[7] = 255;
 			}
-
-			// var numAlphasToCompute = 6;
-			// if (a0 <= a1) {
-			// 	numAlphasToCompute = 4;
-			// 	alphas[6] = 0;
-			// 	alphas[7] = 255;
-			// }
-			// int denominator = numAlphasToCompute + 1;
-			// var n = 2 + numAlphasToCompute;
-			// var a1f = numAlphasToCompute;
-			// var a0f = 1;
-			// for (var i = 2; i < n; i++) {
-			// 	alphas[i] = (byte)((a0f * a0 + a1f * a1) / denominator);
-			// 	a0f++;
-			// 	a1f--;
-			// }
+			int denominator = numAlphasToCompute + 1;
+			var n = 2 + numAlphasToCompute;
+			var a1f = numAlphasToCompute;
+			var a0f = 1;
+			for (var i = 2; i < n; i++) {
+				alphas[i] = (byte)((a0f * a0 + a1f * a1) / denominator);
+				a0f++;
+				a1f--;
+			}
 			return alphas;
 		}
 
-		public Color[] BuildColors(short color0raw, short color1raw) {
+		public Color[] BuildColors(UInt16 color0raw, UInt16 color1raw) {
 			var colors = new Color[4];
 			var c0 = colors[0] = BuildColorFrom565Short(color0raw);
 			var c1 = colors[1] = BuildColorFrom565Short(color1raw);
@@ -332,8 +243,7 @@ namespace Spriter.Models {
 			return colors;
 		}
 
-		public Color BuildColorFrom565Short(short sColor) {
-			var color = (uint)sColor;
+		public Color BuildColorFrom565Short(UInt16 color) {
 			var r = (color & 0xF800) >> 11;
 			var g = (color & 0x07E0) >> 5;
 			var b = (color & 0x001F) >> 0;
