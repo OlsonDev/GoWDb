@@ -166,15 +166,15 @@ namespace Spriter.Models {
 					var a2 = reader.ReadUInt16();
 					var alphaIndices = new [] { a2, a1, a0 };
 					var colors = BuildColors(reader.ReadUInt16(), reader.ReadUInt16());
-					var colorIndices = reader.ReadUInt32BE();
+					var colorIndices = reader.ReadUInt32();
 					for (var y = 0; y < 4; y++) {
 						for (var x = 0; x < 4; x++) {
 							var blockIndex = y * 4 + 3 - x;
 							var alphaIndex = GetAlphaIndex(alphaIndices, blockIndex);
-							var alpha1 = alphas[alphaIndex];
+							var alpha = alphas[alphaIndex];
 							var color = colors[(colorIndices >> (2 * (15 - blockIndex))) & 0x03];
-							var pixelIndex = (by * 4 + y) * width + bx * 4 + x;
-							pixels[pixelIndex] = new Color(color.R, color.G, color.B, alpha1);
+							var pixelIndex = (by * 4 + 3 - y) * width + bx * 4 + x;
+							pixels[pixelIndex] = new Color(color.R, color.G, color.B, alpha);
 						}
 					}
 				}
@@ -215,12 +215,12 @@ namespace Spriter.Models {
 			}
 			int denominator = numAlphasToCompute + 1;
 			var n = 2 + numAlphasToCompute;
-			var a1f = numAlphasToCompute;
-			var a0f = 1;
+			var a0f = numAlphasToCompute;
+			var a1f = 1;
 			for (var i = 2; i < n; i++) {
 				alphas[i] = (byte)((a0f * a0 + a1f * a1) / denominator);
-				a0f++;
-				a1f--;
+				a0f--;
+				a1f++;
 			}
 			return alphas;
 		}
