@@ -177,10 +177,6 @@ namespace Spriter.Models {
 							pixels[pixelIndex] = new Color(color.R, color.G, color.B, alpha1);
 						}
 					}
-
-					if (by == 37 && bx == 3) {
-						var derp = 0;
-					}
 				}
 			}
 
