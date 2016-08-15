@@ -21,13 +21,15 @@ namespace Spriter {
 		private string gfxDirectory;
 
 		private void RunAtfInfo(string[] args) {
-			var path = args.FirstOrDefault();
+			var path = args.FirstOrDefault() ?? @"C:\Program Files (x86)\Steam\steamapps\common\Gems of War\res\Graphics\3\BannersSmall.atf";
 			var file = AtfFile.FromFile(path);
 
 			Console.WriteLine($"Args: {path}");
-			Console.WriteLine($"-------------");
+			Console.WriteLine();
 			Console.WriteLine(file);
-			Console.WriteLine($"-------------");
+
+			var pngPath = Path.ChangeExtension(path, "png");
+			file.SaveAsPng(pngPath);
 		}
 
 		private void RunExtraction() {
