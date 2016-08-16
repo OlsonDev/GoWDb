@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 using ImageProcessorCore;
 using Spriter.Extensions;
 
-namespace Spriter.Models {
+namespace Spriter.Models
+{
     public class AtfFile {
 		private byte[] signature;
 		private byte[] reserved;

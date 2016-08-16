@@ -5,7 +5,7 @@ using ImageProcessorCore;
 using Spriter.Extensions;
 
 namespace Spriter.Models {
-    public class AtfRawCompressed {
+	public class AtfRawCompressed {
 		public uint Dxt1ImageDataLength { get; private set; }
 		public byte[] Dxt1ImageData { get; private set; }
 		public uint PvrtcImageDataLength { get; private set; }
