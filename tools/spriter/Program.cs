@@ -2,14 +2,13 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using ImageProcessorCore;
 using Spriter.Models;
 using Spriter.Services;
 
 namespace Spriter {
-  public class Program {
+	public class Program {
 		static private void Main(string[] args) {
 			var app = new Program();
 			Console.WriteLine("Running...");
