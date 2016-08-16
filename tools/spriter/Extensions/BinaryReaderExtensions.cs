@@ -15,13 +15,13 @@ namespace Spriter.Extensions {
 				}
 		}
 
-  public static byte[] ReadBytesRequired(this BinaryReader reader, int count) {
-    var bytes = reader.ReadBytes(count);
-    if (bytes.Length != count) {
-			throw new EndOfStreamException($"{count} bytes required from stream, but only {bytes.Length} returned.");
+		public static byte[] ReadBytesRequired(this BinaryReader reader, int count) {
+			var bytes = reader.ReadBytes(count);
+			if (bytes.Length != count) {
+				throw new EndOfStreamException($"{count} bytes required from stream, but only {bytes.Length} returned.");
+			}
+			return bytes;
 		}
-    return bytes;
-  }
 
 		/// Reads a Big Endian Int16
 		public static Int16 ReadInt16BE(this BinaryReader reader) => BitConverter.ToInt16(reader.ReadBytesRequired(2).Reverse(), 0);
