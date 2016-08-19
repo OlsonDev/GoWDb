@@ -188,31 +188,31 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K00.K00.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K01.K01.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K02.K02.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K03.K03.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K04.K04.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K05.K05.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K06.K06.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K07.K07.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K08.K08.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K09.K09.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K10.K10.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K11.K11.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K12.K12.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K13.K13.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K14.K14.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K15.K15.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K16.K16.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K17.K17.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K18.K18.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K19.K19.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K20.K20.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K21.K21.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K22.K22.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K23.K23.png</key>
-            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K24.K24.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K00.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K01.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K02.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K03.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K04.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K05.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K06.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K07.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K08.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K09.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K10.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K11.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K12.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K13.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K14.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K15.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K16.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K17.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K18.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K19.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K20.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K21.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K22.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K23.png</key>
+            <key type="filename">../bin/Debug/netcoreapp1.0/extracted/Banners/K24.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -220,31 +220,31 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K00.K00.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K01.K01.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K02.K02.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K03.K03.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K04.K04.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K05.K05.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K06.K06.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K07.K07.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K08.K08.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K09.K09.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K10.K10.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K11.K11.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K12.K12.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K13.K13.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K14.K14.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K15.K15.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K16.K16.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K17.K17.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K18.K18.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K19.K19.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K20.K20.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K21.K21.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K22.K22.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K23.K23.png</filename>
-            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K24.K24.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K00.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K01.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K02.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K03.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K04.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K05.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K06.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K07.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K08.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K09.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K10.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K11.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K12.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K13.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K14.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K15.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K16.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K17.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K18.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K19.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K20.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K21.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K22.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K23.png</filename>
+            <filename>../bin/Debug/netcoreapp1.0/extracted/Banners/K24.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
