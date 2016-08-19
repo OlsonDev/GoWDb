@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:537247f25f94d167957c783ab3649c9d:05ca27255a205ed39deeacff21a07fda:ab2cf3cadc60053f12c1cb529318382e$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="ManaColors.png" width="829" height="730">
+    <sprite n="TroopCardAll.All" x="0" y="0" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.Blue" x="117" y="0" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueGreen" x="234" y="0" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueGreenOrange" x="351" y="0" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueGreenPurple" x="471" y="0" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueGreenRed" x="588" y="0" w="118" h="120" pX="0.5" pY="0.5" oX="1" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueGreenYellow" x="708" y="0" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueOrange" x="0" y="122" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BluePurple" x="117" y="122" w="118" h="120" pX="0.5" pY="0.5" oX="1" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BluePurpleOrange" x="237" y="122" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueRed" x="357" y="122" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueRedOrange" x="474" y="122" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueRedPurple" x="594" y="122" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueRedYellow" x="711" y="122" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueYellow" x="0" y="244" w="118" h="120" pX="0.5" pY="0.5" oX="1" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueYellowOrange" x="120" y="244" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.BlueYellowPurple" x="237" y="244" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.Green" x="354" y="244" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenOrange" x="474" y="244" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenPurple" x="594" y="244" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenPurpleOrange" x="711" y="244" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenRed" x="0" y="366" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenRedOrange" x="117" y="366" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenRedPurple" x="237" y="366" w="118" h="120" pX="0.5" pY="0.5" oX="1" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenRedYellow" x="357" y="366" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenYellow" x="477" y="366" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenYellowOrange" x="594" y="366" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.GreenYellowPurple" x="711" y="366" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.Orange" x="0" y="488" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.Purple" x="120" y="488" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.PurpleOrange" x="237" y="488" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.Red" x="354" y="488" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.RedOrange" x="471" y="488" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.RedPurple" x="591" y="488" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.RedPurpleOrange" x="708" y="488" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.RedYellow" x="0" y="610" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.RedYellowOrange" x="117" y="610" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.RedYellowPurple" x="237" y="610" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.Yellow" x="354" y="610" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.YellowOrange" x="474" y="610" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.YellowPurple" x="591" y="610" w="118" h="120" pX="0.5" pY="0.5" oX="2" oY="0" oW="120" oH="120"/>
+    <sprite n="TroopCardAll.YellowPurpleOrange" x="711" y="610" w="115" h="120" pX="0.5" pY="0.5" oX="3" oY="0" oW="120" oH="120"/>
+</TextureAtlas>
