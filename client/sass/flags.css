@@ -1,0 +1,9 @@
+.flag { display: block; background-image: url(/images/flags.png); }
+.flag.de-DE { width: 314px; height: 210px; background-position: 0 0; }
+.flag.en-US { width: 314px; height: 210px; background-position: 0 -212px; }
+.flag.es-ES { width: 314px; height: 210px; background-position: 0 -424px; }
+.flag.fr-FR { width: 314px; height: 210px; background-position: 0 -636px; }
+.flag.it-IT { width: 314px; height: 210px; background-position: 0 -848px; }
+.flag.jp-JP { width: 314px; height: 210px; background-position: 0 -1060px; }
+.flag.kr-KR { width: 314px; height: 210px; background-position: 0 -1272px; }
+.flag.zh-CH { width: 314px; height: 210px; background-position: 0 -1484px; }

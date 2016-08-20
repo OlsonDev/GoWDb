@@ -1,0 +1,26 @@
+.banner { display: block; background-image: url(/images/banners.png); }
+.banner.k00 { width: 192px; height: 312px; background-position: 0 -1324px; }
+.banner.k01 { width: 200px; height: 336px; background-position: 0 -338px; }
+.banner.k02 { width: 178px; height: 308px; background-position: -816px -652px; }
+.banner.k03 { width: 202px; height: 336px; background-position: 0 0; }
+.banner.k04 { width: 196px; height: 326px; background-position: -202px -996px; }
+.banner.k05 { width: 192px; height: 312px; background-position: 0 -1010px; }
+.banner.k06 { width: 180px; height: 324px; background-position: -816px 0; }
+.banner.k07 { width: 178px; height: 308px; background-position: -572px -1320px; }
+.banner.k08 { width: 182px; height: 312px; background-position: -388px -1324px; }
+.banner.k09 { width: 202px; height: 322px; background-position: -204px -336px; }
+.banner.k10 { width: 192px; height: 318px; background-position: -400px -1000px; }
+.banner.k11 { width: 184px; height: 324px; background-position: -812px -962px; }
+.banner.k12 { width: 202px; height: 324px; background-position: -612px -334px; }
+.banner.k13 { width: 202px; height: 334px; background-position: -204px 0; }
+.banner.k14 { width: 200px; height: 334px; background-position: -202px -660px; }
+.banner.k15 { width: 200px; height: 336px; background-position: -408px -336px; }
+.banner.k16 { width: 192px; height: 318px; background-position: -792px -1288px; }
+.banner.k17 { width: 200px; height: 332px; background-position: 0 -676px; }
+.banner.k18 { width: 192px; height: 312px; background-position: -194px -1324px; }
+.banner.k19 { width: 184px; height: 324px; background-position: -606px -994px; }
+.banner.k20 { width: 180px; height: 324px; background-position: -816px -326px; }
+.banner.k21 { width: 200px; height: 332px; background-position: -610px -660px; }
+.banner.k22 { width: 200px; height: 324px; background-position: -404px -674px; }
+.banner.k23 { width: 202px; height: 332px; background-position: -612px 0; }
+.banner.k24 { width: 202px; height: 334px; background-position: -408px 0; }

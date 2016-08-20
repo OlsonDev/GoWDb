@@ -1,0 +1,13 @@
+.troop-card { display: block; background-image: url(/images/troop-card.png); }
+.troop-card.frame-rarity-0 { width: 559px; height: 789px; background-position: -1743px -797px; }
+.troop-card.frame-rarity-1 { width: 617px; height: 795px; background-position: -613px 0; }
+.troop-card.frame-rarity-2 { width: 575px; height: 795px; background-position: -1232px 0; }
+.troop-card.frame-rarity-3 { width: 579px; height: 793px; background-position: -1162px -797px; }
+.troop-card.frame-rarity-4 { width: 599px; height: 788px; background-position: 0 -805px; }
+.troop-card.frame-rarity-5 { width: 611px; height: 803px; background-position: 0 0; }
+.troop-card.spell-rarity-0 { width: 559px; height: 788px; background-position: -601px -805px; }
+.troop-card.spell-rarity-1 { width: 559px; height: 788px; background-position: -2370px 0; }
+.troop-card.spell-rarity-2 { width: 559px; height: 789px; background-position: -1809px 0; }
+.troop-card.spell-rarity-3 { width: 559px; height: 788px; background-position: -2865px -790px; }
+.troop-card.spell-rarity-4 { width: 559px; height: 788px; background-position: -2931px 0; }
+.troop-card.spell-rarity-5 { width: 559px; height: 789px; background-position: -2304px -791px; }

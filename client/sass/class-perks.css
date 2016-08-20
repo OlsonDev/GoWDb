@@ -1,0 +1,23 @@
+.class-perk { display: block; background-image: url(/images/class-perks.png); }
+.class-perk.armor { width: 200px; height: 200px; background-position: 0 0; }
+.class-perk.attack { width: 200px; height: 200px; background-position: 0 -202px; }
+.class-perk.beast { width: 200px; height: 200px; background-position: 0 -404px; }
+.class-perk.construct { width: 200px; height: 200px; background-position: 0 -606px; }
+.class-perk.daemon { width: 200px; height: 200px; background-position: 0 -808px; }
+.class-perk.divine { width: 200px; height: 200px; background-position: -202px 0; }
+.class-perk.dragon { width: 200px; height: 200px; background-position: -404px 0; }
+.class-perk.dwarf { width: 200px; height: 200px; background-position: -606px 0; }
+.class-perk.elemental { width: 200px; height: 200px; background-position: -808px 0; }
+.class-perk.elf { width: 200px; height: 200px; background-position: -202px -202px; }
+.class-perk.fey { width: 200px; height: 200px; background-position: -202px -404px; }
+.class-perk.giant { width: 200px; height: 200px; background-position: -202px -606px; }
+.class-perk.human { width: 200px; height: 200px; background-position: -202px -808px; }
+.class-perk.knight { width: 200px; height: 200px; background-position: -404px -202px; }
+.class-perk.life { width: 200px; height: 200px; background-position: -606px -202px; }
+.class-perk.mana { width: 200px; height: 200px; background-position: -808px -202px; }
+.class-perk.marauder { width: 200px; height: 200px; background-position: -404px -404px; }
+.class-perk.mech { width: 200px; height: 200px; background-position: -404px -606px; }
+.class-perk.monster { width: 200px; height: 200px; background-position: -404px -808px; }
+.class-perk.raksha { width: 200px; height: 200px; background-position: -606px -404px; }
+.class-perk.undead { width: 200px; height: 200px; background-position: -808px -404px; }
+.class-perk.wildfolk { width: 200px; height: 200px; background-position: -606px -606px; }
