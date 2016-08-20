@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -42,6 +43,9 @@ namespace Spriter
 			var assemblyPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 			var extracted = Path.Combine(assemblyPath, "extracted");
 			var baseSpritesheetDirectory = Path.Combine(assemblyPath, "spritesheets");
+			var clientDirectory = Path.Combine(assemblyPath, @"..\..\..\..\..\client");
+			var clientImagesDirectory = Path.Combine(clientDirectory, "images");
+			var clientSassDirectory = Path.Combine(clientDirectory, "sass");
 			var sheets = new List<Spritesheet> {
 				new Spritesheet("banners"     , @"^Banners\\K[0-9]{2}\.png$", filename => filename.ToLower()),
 				new Spritesheet("classes"     , @"^Classes\.(?!blade|comingsoon)[a-z]+\.png$", filename => filename.Replace("Classes.", "")),
@@ -96,8 +100,13 @@ namespace Spriter
 				var height = int.Parse(atlas.Attribute("height").Value);
 				var img = new Image(width, height);
 				var pixels = img.Pixels;
+				var cssClass = Regex.Replace(sheet.Name, "s$", "");
+				cssClass = cssClass == "classe" ? "class" : cssClass;
+				var css = new StringBuilder();
+				css.AppendLine($".{cssClass} {{ display: block; background-image: url(/images/{sheet.Name}.png); }}");
 				foreach (var sprite in atlas.Elements("sprite")) {
-					var spriteFile = Path.Combine(spritesheetDirectory, $"{sprite.Attribute("n").Value}.png");
+					var spriteName = sprite.Attribute("n").Value;
+					var spriteFile = Path.Combine(spritesheetDirectory, $"{spriteName}.png");
 					var spriteImage = new Image(File.OpenRead(spriteFile));
 					var spritePixels = spriteImage.Pixels;
 					var x = int.Parse(sprite.Attribute("x").Value);
@@ -112,8 +121,14 @@ namespace Spriter
 							pixels[(y + i) * width + x + j] = spritePixels[(i + oY) * oW + j + oX];
 						}
 					}
+					var bpx = x == 0 ? "0" : $"-{x}px";
+					var bpy = y == 0 ? "0" : $"-{y}px";
+					css.AppendLine($".{cssClass}.{spriteName} {{ width: {w}px; height: {h}px; background-position: {bpx} {bpy}; }}");
 				}
-				img.Save(File.OpenWrite(Path.Combine(baseSpritesheetDirectory, $"{sheet.Name}.png")));
+				img.Save(File.OpenWrite(Path.Combine(clientImagesDirectory, $"{sheet.Name}.png")));
+				css.Length--;
+				css.Length--;
+				File.WriteAllText(Path.Combine(clientSassDirectory, $"{sheet.Name}.css"), css.ToString());
 			}
 		}
 

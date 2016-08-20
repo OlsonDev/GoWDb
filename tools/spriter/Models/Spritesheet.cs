@@ -16,7 +16,7 @@ namespace Spriter.Models {
 
 		public string BuildTexturePackerArguments() {
 			var args = "";
-			args += $"--sheet __{Name}.png ";
+			args += $"--sheet {Name}.png ";
 			args += $"--data {Name}.xml --format xml ";
 			args += $"--trim-sprite-names --disable-rotation ";
 			if (MaxWidth > 0)  args += $"--max-width {MaxWidth} ";
