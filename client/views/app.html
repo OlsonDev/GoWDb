@@ -108,7 +108,6 @@
         this.page = page || 'view1';
       },
       _pageChanged: function(page) {
-        console.log('pageChanged = ', page);
         this.importHref(this.resolveUrl(page + '.html'), null, null, true);
       }
     });
