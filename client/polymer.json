@@ -1,0 +1,5 @@
+{
+  "entrypoint": "index.html",
+  "shell": "gems-app.html",
+  "fragments": []
+}
