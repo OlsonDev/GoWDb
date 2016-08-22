@@ -14,7 +14,7 @@ namespace Gems.Models.Db {
 		public DbSet<Kingdom> Kingdoms { get; set; }
 		// public DbSet<Quest> Quests { get; set; }
 		// public DbSet<Spell> Spells { get; set; }
-		// public DbSet<Trait> Traits { get; set; }
+		public DbSet<Trait> Traits { get; set; }
 		public DbSet<Troop> Troops { get; set; }
 		// public DbSet<Weapon> Weapons { get; set; }
 
@@ -27,6 +27,16 @@ namespace Gems.Models.Db {
 
 			modelBuilder.Entity<Kingdom>()
 				.HasIndex(e => new { e.Id })
+				.IsUnique()
+			;
+
+			modelBuilder.Entity<Troop>()
+				.HasIndex(e => new { e.Id })
+				.IsUnique()
+			;
+
+			modelBuilder.Entity<Trait>()
+				.HasIndex(e => new { e.Code })
 				.IsUnique()
 			;
 
