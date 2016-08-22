@@ -8,6 +8,7 @@ namespace Gems.Models.Entity {
 		[Key]
 		public Guid KingdomId { get; set; }
 		public int Id { get; set; }
+		[MaxLength(40)]
 		public string ReferenceName { get; set; }
 		public int BannerArmorBonus { get; set; }
 		public int BannerAttackBonus { get; set; }

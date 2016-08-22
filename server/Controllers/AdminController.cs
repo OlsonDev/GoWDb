@@ -43,13 +43,20 @@ namespace Gems.Controllers {
 			var world = JsonConvert.DeserializeObject<Models.Conceptual.World>(json);
 
 			_dbContext.Database.BeginTransaction();
+			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Troop");
 			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Kingdom");
 			foreach (var kingdom in world.Kingdoms) {
 				kingdom.KingdomId = _dbContext.NewGuidComb();
 				_dbContext.Add(kingdom);
 			}
+			foreach (var troop in world.Troops) {
+				troop.TroopId = _dbContext.NewGuidComb();
+				_dbContext.Add(troop);
+			}
+
 			_dbContext.SaveChanges();
 			_dbContext.Database.CommitTransaction();
+
 
 			return json;
 		}

@@ -15,7 +15,7 @@ namespace Gems.Models.Db {
 		// public DbSet<Quest> Quests { get; set; }
 		// public DbSet<Spell> Spells { get; set; }
 		// public DbSet<Trait> Traits { get; set; }
-		// public DbSet<Troop> Troops { get; set; }
+		public DbSet<Troop> Troops { get; set; }
 		// public DbSet<Weapon> Weapons { get; set; }
 
 		public DbSet<Text> Texts { get; set; }
