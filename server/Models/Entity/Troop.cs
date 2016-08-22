@@ -29,8 +29,8 @@ namespace Gems.Models.Entity {
 		// public List<int> AttackIncrease { get; set; }
 		// public List<int> HealthIncrease { get; set; }
 		// public List<int> SpellPowerIncrease { get; set; }
-
-		// public ManaColors<bool> ManaColors { get; set; }
+		public Guid? ManaColorId { get; set; }
+		public ManaColor ManaColors { get; set; }
 		// public List<string> Traits { get; set; }
 
 		[MaxLength(200)]

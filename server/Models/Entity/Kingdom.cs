@@ -20,7 +20,8 @@ namespace Gems.Models.Entity {
 		public int LevelRequired { get; set; }
 		// public int[] Links { get; set; }
 		public int LootTableId { get; set; }
-		// public ManaColors<bool> ManaColors { get; set; }
+		public Guid? ManaColorId { get; set; }
+		public ManaColor ManaColors { get; set; }
 		public int NumLinks { get; set; }
 		public int PassiveManaBonusPercentage { get; set; }
 		// public int[] TroopIds { get; set; }

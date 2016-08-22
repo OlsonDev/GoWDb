@@ -7,11 +7,10 @@ namespace Gems.Models.Entity {
 	public class Weapon {
 		[Key]
 		public Guid WeaponId { get; set; }
-
-		// public ManaColors<bool> ManaColors { get; set; }
-
 		public int Id { get; set; }
 		public int SpellId { get; set; }
+		public Guid? ManaColorId { get; set; }
+		public ManaColor ManaColors { get; set; }
 		public int MasteryRequirement { get; set; }
 		public int OverrideAI { get; set; }
 		[MaxLength(20)]

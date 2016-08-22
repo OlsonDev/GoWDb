@@ -30,14 +30,29 @@ namespace Gems.Models.Db {
 				.IsUnique()
 			;
 
+			modelBuilder.Entity<Kingdom>()
+				.HasOne(e => e.ManaColors)
+				.WithOne()
+			;
+
 			modelBuilder.Entity<Troop>()
 				.HasIndex(e => new { e.Id })
 				.IsUnique()
 			;
 
+			modelBuilder.Entity<Troop>()
+				.HasOne(e => e.ManaColors)
+				.WithOne()
+			;
+
 			modelBuilder.Entity<Weapon>()
 				.HasIndex(e => new { e.Id })
 				.IsUnique()
+			;
+
+			modelBuilder.Entity<Weapon>()
+				.HasOne(e => e.ManaColors)
+				.WithOne()
 			;
 
 			modelBuilder.Entity<Spell>()
