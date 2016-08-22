@@ -13,10 +13,10 @@ namespace Gems.Models.Db {
 		// public DbSet<HeroClass> HeroClasses { get; set; }
 		public DbSet<Kingdom> Kingdoms { get; set; }
 		// public DbSet<Quest> Quests { get; set; }
-		// public DbSet<Spell> Spells { get; set; }
+		public DbSet<Spell> Spells { get; set; }
 		public DbSet<Trait> Traits { get; set; }
 		public DbSet<Troop> Troops { get; set; }
-		// public DbSet<Weapon> Weapons { get; set; }
+		public DbSet<Weapon> Weapons { get; set; }
 
 		public DbSet<Text> Texts { get; set; }
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
@@ -31,6 +31,16 @@ namespace Gems.Models.Db {
 			;
 
 			modelBuilder.Entity<Troop>()
+				.HasIndex(e => new { e.Id })
+				.IsUnique()
+			;
+
+			modelBuilder.Entity<Weapon>()
+				.HasIndex(e => new { e.Id })
+				.IsUnique()
+			;
+
+			modelBuilder.Entity<Spell>()
 				.HasIndex(e => new { e.Id })
 				.IsUnique()
 			;

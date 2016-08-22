@@ -44,6 +44,8 @@ namespace Gems.Controllers {
 
 			_dbContext.Database.BeginTransaction();
 			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Trait");
+			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Spell");
+			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Weapon");
 			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Troop");
 			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Kingdom");
 			foreach (var kingdom in world.Kingdoms) {
@@ -53,6 +55,14 @@ namespace Gems.Controllers {
 			foreach (var troop in world.Troops) {
 				troop.TroopId = _dbContext.NewGuidComb();
 				_dbContext.Add(troop);
+			}
+			foreach (var weapon in world.Weapons) {
+				weapon.WeaponId = _dbContext.NewGuidComb();
+				_dbContext.Add(weapon);
+			}
+			foreach (var spell in world.Spells) {
+				spell.SpellId = _dbContext.NewGuidComb();
+				_dbContext.Add(spell);
 			}
 			foreach (var trait in world.Traits) {
 				trait.TraitId = _dbContext.NewGuidComb();
