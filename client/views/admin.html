@@ -1,4 +1,5 @@
-<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/polymer.html"/>
+<link rel="import" href="/bower_components/file-upload/file-upload.html"/>
 <dom-module id="gems-admin">
   <template>
     <style>
@@ -8,6 +9,7 @@
       }
     </style>
     <h1>Admin</h1>
+    <file-upload target="/admin/upload" file-data-name="files" droppable="true" raised="true" drop-text="Drop files here">Choose file</file-upload>
   </template>
   <script>
     Polymer({

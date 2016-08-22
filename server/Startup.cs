@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using Gems.Services;
 
 namespace Gems {
 	public class Startup {
@@ -46,6 +47,7 @@ namespace Gems {
 			});
 
 			services.AddSingleton<IConfiguration>(sp => Configuration);
+			services.AddSingleton<GameDataDecrypterService>();
 
 			// These should be request scoped so DbContext leases a new connection and doesn't close it on other requests
 			//services

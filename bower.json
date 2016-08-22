@@ -1,5 +1,5 @@
 {
-  "name": "Gems of War Database",
+  "name": "gems-of-war-database",
   "authors": [
     "OlsonDev"
   ],
@@ -15,7 +15,8 @@
     "iron-pages": "polymerelements/iron-pages#^1.0.8",
     "iron-selector": "polymerelements/iron-selector#^1.5.2",
     "paper-icon-button": "polymerelements/paper-icon-button#^1.1.2",
-    "polymer": "polymer/polymer#^1.6.1"
+    "polymer": "polymer/polymer#^1.6.1",
+    "file-upload": "^1.7.7"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

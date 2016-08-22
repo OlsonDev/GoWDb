@@ -3,14 +3,32 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Reflection;
+using Gems.Models.Entity;
 
 namespace Gems.Models.Db {
 	public class ApplicationDbContext : DbContext {
+		// public DbSet<AvatarSkin> AvatarSkins { get; set; }
+		// public DbSet<Cloud> Clouds { get; set; }
+		// public DbSet<ConversationCharacter> ConversationCharacters { get; set; }
+		// public DbSet<HeroClass> HeroClasses { get; set; }
+		public DbSet<Kingdom> Kingdoms { get; set; }
+		// public DbSet<Quest> Quests { get; set; }
+		// public DbSet<Spell> Spells { get; set; }
+		// public DbSet<Trait> Traits { get; set; }
+		// public DbSet<Troop> Troops { get; set; }
+		// public DbSet<Weapon> Weapons { get; set; }
+
+		public DbSet<Text> Texts { get; set; }
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder) {
 			BuildModelSchemaNames(modelBuilder);
+
+			modelBuilder.Entity<Kingdom>()
+				.HasIndex(e => new { e.Id })
+				.IsUnique()
+			;
 
 			base.OnModelCreating(modelBuilder);
 		}
