@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -51,5 +52,7 @@ namespace Gems.Models.Entity {
 		public string TroopType { get; set; }
 		[MaxLength(20)]
 		public string TroopType2 { get; set; }
+
+		public List<KingdomTroop> KingdomTroops { get; set; } = new List<KingdomTroop>();
 	}
 }

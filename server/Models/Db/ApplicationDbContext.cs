@@ -35,6 +35,22 @@ namespace Gems.Models.Db {
 				.WithOne()
 			;
 
+			modelBuilder.Entity<KingdomTroop>()
+				.HasKey(e => new { e.KingdomId, e.TroopId })
+			;
+
+			modelBuilder.Entity<KingdomTroop>()
+				.HasOne(e => e.Kingdom)
+				.WithMany(e => e.KingdomTroops)
+				.HasForeignKey(e => e.KingdomId)
+			;
+
+			modelBuilder.Entity<KingdomTroop>()
+				.HasOne(e => e.Troop)
+				.WithMany(e => e.KingdomTroops)
+				.HasForeignKey(e => e.TroopId)
+			;
+
 			modelBuilder.Entity<Troop>()
 				.HasIndex(e => new { e.Id })
 				.IsUnique()

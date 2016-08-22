@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Gems.Models.Db;
+using Gems.Models.Entity;
 using Gems.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -39,17 +40,28 @@ namespace Gems.Controllers {
 			var reader = new StreamReader(file.OpenReadStream());
 			var raw = reader.ReadToEnd();
 			var json = _gameDataDecrypterService.Decrypt(raw);
-			dynamic debugWorld = JObject.Parse(json);
+			dynamic dynWorld = JObject.Parse(json);
 			var world = JsonConvert.DeserializeObject<Models.Conceptual.World>(json);
 
 			_dbContext.Database.BeginTransaction();
-			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Trait");
-			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Spell");
-			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Weapon");
-			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Troop");
-			_dbContext.Database.ExecuteSqlCommand("TRUNCATE TABLE world.Kingdom");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.Trait");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.Spell");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.Weapon");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.KingdomToTroop");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.Troop");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.Kingdom");
+			_dbContext.Database.ExecuteSqlCommand("DELETE FROM world.ManaColor");
+
 			foreach (var kingdom in world.Kingdoms) {
 				kingdom.KingdomId = _dbContext.NewGuidComb();
+				var dynKingdom = ((IEnumerable<dynamic>)dynWorld.Kingdoms).First(k => k.Id == kingdom.Id);
+				foreach (var troopId in dynKingdom.TroopIds) {
+					if (troopId <= 0) continue;
+					var kingdomTroop = new KingdomTroop();
+					kingdomTroop.Kingdom = kingdom;
+					kingdomTroop.Troop = world.Troops.First(t => t.Id == troopId.Value);
+					kingdom.KingdomTroops.Add(kingdomTroop);
+				}
 				_dbContext.Add(kingdom);
 			}
 			foreach (var troop in world.Troops) {
